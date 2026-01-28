@@ -1,36 +1,27 @@
 "use client";
 
-import { useState, FormEvent } from "react";
 import Link from "next/link";
+import { loginAction } from "@/app/action";
 
 export default function LoginPage() {
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log({ email, password });
-  };
 
   return (
     <div className="container">
-      <form onSubmit={handleSubmit} className="form">
+      <form action={loginAction} className="form">
         <h2>Login</h2>
 
         <input
+          name="email"
           type="email"
           placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
           required
           className="input"
         />
 
         <input
+          name="password"
           type="password"
           placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
           required
           className="input"
         />
