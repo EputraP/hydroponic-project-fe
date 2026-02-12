@@ -26,22 +26,26 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
-@layer utilities {
-  .container {
+.container {
       @apply min-h-screen flex justify-center items-center;
   }
-  
-  .form {
+
+.form {
     @apply w-80 p-6 border border-solid border-gray-300 rounded-lg flex flex-col gap-3;
   }
-
-  .input {
+.input {
     @apply p-2.5 text-sm;
   }
 
-  .button {
-    @apply bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600;
-  }
+.form {
+    @apply w-80 p-6 border border-solid border-gray-300 rounded-lg flex flex-col gap-3;
+  } 
+
+.button {
+    @apply bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600;  
+}
+@layer utilities {
+  
+  
+  
 }
