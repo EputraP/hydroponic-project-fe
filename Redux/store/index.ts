@@ -1,10 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "./slices/counterSlice";
 import landingPageSwitcherReducer from "./slices/landingPageSwitcherSlice";
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
     landingPageSwitcher: landingPageSwitcherReducer,
   },
 });

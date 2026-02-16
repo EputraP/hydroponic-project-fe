@@ -1,3 +1,4 @@
 export type SwitcherState = {
-  value: string;
+    page:string,
+    selectedPage: string
 };

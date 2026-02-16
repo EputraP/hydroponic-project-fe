@@ -1,12 +1,8 @@
 import InformationContainer from "./information-container"
 import Card from "./card"
-import { useDispatch } from "react-redux"
-import { changeSwitcherVal } from "@/Redux/store/slices/landingPageSwitcherSlice";
 
 export default function MainLandingPage(){  
-    const dispatch = useDispatch();
-    
-    const date = new Date()
+
     return(
         <>
             <InformationContainer />
@@ -28,12 +24,6 @@ export default function MainLandingPage(){
                 <Card title="Remote Access" />
                 <Card title="Customizable Alerts" />
 
-            </div>
-     
-            <div className="py-4 w-full flex justify-center">
-                <button onClick={() => dispatch(changeSwitcherVal("detail"))} className="px-6 py-3 rounded-lg bg-green-600 text-white text-lg font-medium hover:bg-green-700 transition-colors">
-                    Test trigger
-                </button>
             </div>
         </>
     )

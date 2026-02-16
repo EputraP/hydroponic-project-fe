@@ -1,18 +1,18 @@
 import { SwitcherState } from "@/app/types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-
-
 const initialState: SwitcherState = {
-  value: "main",
+    page: "main",
+    selectedPage: ""
 };
 
 const landingPageSwitcherSlice = createSlice({
     name: "landingPageSwitcher",
     initialState,
   reducers: {
-    changeSwitcherVal: (state, action: PayloadAction<string>) => {
-      state.value = action.payload;
+    changeSwitcherVal: (state, action: PayloadAction<SwitcherState>) => {
+      state.page = action.payload.page;
+      state.selectedPage = action.payload.selectedPage;
     },
   },
 });

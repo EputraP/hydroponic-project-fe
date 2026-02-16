@@ -15,7 +15,7 @@ export default function DetailLandingPage(){
                 </h2>
             </div>
             <div className="py-4 w-full flex justify-center">
-                <button onClick={() => dispatch(changeSwitcherVal("main"))} className="px-6 py-3 rounded-lg bg-green-600 text-white text-lg font-medium hover:bg-green-700 transition-colors">
+                <button onClick={() => dispatch(changeSwitcherVal({page: "main", selectedPage: ""}))} className="px-6 py-3 rounded-lg bg-green-600 text-white text-lg font-medium hover:bg-green-700 transition-colors">
                     Back to Main
                 </button>
             </div>
