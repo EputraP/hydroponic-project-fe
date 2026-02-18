@@ -20,7 +20,7 @@ export default function InformationContainer() {
   if (!date) return null; // ✅ prevent hydration mismatch
 
   return (
-    <div className="w-full flex justify-end py-4">
+    <div className="w-fit flex justify-end py-4">
       <div className="relative flex gap-14 px-11 py-8 rounded-xl 
           text-black text-[24px] font-medium
           backdrop-blur-md shadow-lg border border-white/30
