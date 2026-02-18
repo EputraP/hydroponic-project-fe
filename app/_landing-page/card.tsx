@@ -17,8 +17,15 @@ export default function Card({ type, title, disabled = false}: CardProps) {
     )   
   }else{
     return (
-      <div className={`backdrop-blur-md bg-[#88ba66] rounded-2xl p-6 gap-2.5 flex flex-col items-center justify-center hover:scale-102 hover:bg-[#a7d87c] transition ${disabled ? "opacity-50  bg-[#A7D87C] cursor-not-allowed pointer-events-none" : "cursor-pointer"}`}>
-        {title}
+      <div className={`backdrop-blur-md overflow-hidden bg-[#88ba66] rounded-2xl  gap-2.5 flex flex-col items-center justify-center hover:scale-102 hover:bg-[#a7d87c] transition ${disabled ? "opacity-50  bg-[#A7D87C] cursor-not-allowed pointer-events-none" : "cursor-pointer"}`}>
+        <div className="w-full h-8/10 flex items-center justify-center">
+          <div className="w-32 h-32 bg-[#D3FFA9] rounded-full flex items-center justify-center mb-3">
+        
+          </div>
+        </div>        
+        <div className=" w-full h-2/10 flex items-center justify-center bg-white/50 ">
+          <label className="text-[24px] text-center font-semibold text-black">{title}</label>
+        </div>
       </div>
     )
 
