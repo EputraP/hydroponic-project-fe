@@ -3,30 +3,30 @@
 import { useEffect, useState } from "react";
 
 export default function InformationContainer() {
-  const [date, setDate] = useState<Date | null>(null); // ✅ important
+  const [date, setDate] = useState<Date | null>(null); 
 
   useEffect(() => {
     function updateTime() {
       setDate(new Date());
     }
 
-    updateTime(); // run once on client
+    updateTime(); 
 
     const interval = setInterval(updateTime, 60 * 1000);
 
     return () => clearInterval(interval);
   }, []);
 
-  if (!date) return null; // ✅ prevent hydration mismatch
+  if (!date) return null; 
 
   return (
     <div className="w-fit flex justify-end py-4">
-      <div className="relative flex gap-14 px-11 py-8 rounded-xl 
+      <div className="relative flex gap-14 px-11 py-6 rounded-xl 
           text-black text-[24px] font-medium
           backdrop-blur-md shadow-lg border border-white/30
           bg-[#8db572]">
 
-        <span>
+        <span className="whitespace-nowrap">
           {date.toLocaleString("id-ID", {
             day: "2-digit",
             month: "short",
@@ -36,8 +36,8 @@ export default function InformationContainer() {
           })}
         </span>
 
-        <span>Admin</span>
-        <span>Logout</span>
+        <span className="whitespace-nowrap">Admin</span>
+        <span className="whitespace-nowrap">Logout</span>
       </div>
     </div>
   );
