@@ -6,7 +6,7 @@ export function middleware(request:NextRequest){
     const {pathname} = request.nextUrl;
     const token = request.cookies.get("refresh-token")?.value;
 
-    console.log({pathname, token});
+    
     if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/favicon.ico") ||

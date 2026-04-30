@@ -9,7 +9,7 @@ export default function Card({ type, title, disabled = false}: CardProps) {
 
   const dispatch = useDispatch();
 
-  const currentPage = useSelector((state: RootState) => state.landingPageSwitcher.page);
+  const currentPage = useSelector((state: RootState) => state.landingPageSwitcher.selectedPage).toLowerCase();
 
   if(type === "main"){
     return (
